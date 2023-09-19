@@ -60,13 +60,13 @@ MELCOW_VID = environ.get('MELCOW_VID',"")
 
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6150227478 1877279215 5039863679').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '0').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID')
+support_chat_id = environ.get('SUPPORT_CHAT_ID','-1001520649721')
 # This is required for the plugins involving the file system.
 TMP_DOWNLOAD_DIRECTORY = environ.get("TMP_DOWNLOAD_DIRECTORY", "./DOWNLOADS/")
 
@@ -83,7 +83,7 @@ MONGO_URL = os.environ.get('MONGO_URL', "")
 DOWNLOAD_LOCATION = environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/AudioBoT/")
 
 # FSUB
-auth_channel = environ.get('AUTH_CHANNEL')
+auth_channel = environ.get('AUTH_CHANNEL','-1001520649721')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 # Set to False inside the bracket if you don't want to use Request Channel else set it to Channel ID
 REQ_CHANNEL = environ.get("REQ_CHANNEL", "False")
@@ -103,7 +103,7 @@ AI_LOGS = int(environ.get("AI_LOGS","-1001778730930")) #GIVE YOUR NEW LOG CHANNE
 
 
 #Auto approve
-CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1001965567679 -1001968513812').split()]
+CHAT_ID = [int(app_chat_id) if id_pattern.search(app_chat_id) else app_chat_id for app_chat_id in environ.get('CHAT_ID', '-1001806781977').split()]
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "Hello {mention}\nWelcome To {title}\n\nYour request has been approved")
 APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 
@@ -115,10 +115,10 @@ MAX_BTN = int(environ.get('MAX_BTN', "7"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/hybrid_chat")
 MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/HYBRID_FILM")
 #Must change this link to work redirect (FILE_FORWORD)
-FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+_JO2mWZ56Hk3ZDZl")
+FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+hWNLMSD1jktkNmVk")
 MSG_ALRT = environ.get('MSG_ALRT', 'Check & Try all my features')
 FILE_CHANNEL = int(environ.get('FILE_CHANNEL', '-1001778730930'))
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', 0))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001968636228'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'hybrid_chat')
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
