@@ -113,7 +113,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 PORT = os.environ.get("PORT", "8080")
 MAX_BTN = int(environ.get('MAX_BTN', "7"))
 S_GROUP = environ.get('S_GROUP',"https://t.me/hybrid_chat")
-MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/HybridMovies")
+MAIN_CHANNEL = environ.get('MAIN_CHANNEL',"https://t.me/HYBRID_FILM")
 #Must change this link to work redirect (FILE_FORWORD)
 FILE_FORWARD = environ.get('FILE_FORWARD',"https://t.me/+_JO2mWZ56Hk3ZDZl")
 MSG_ALRT = environ.get('MSG_ALRT', 'Check & Try all my features')
